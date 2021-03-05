@@ -23,5 +23,9 @@ public class Algoritmo {
 
         return list.size() != n + 1? fibonacci(n) : list.get(n);
     }
+
+    public List getFibonacciList() {
+        return list;
+    }
     
 }

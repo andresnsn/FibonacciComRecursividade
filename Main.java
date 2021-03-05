@@ -23,6 +23,8 @@ public class Main {
         System.out.println(algoritmo.fibonacci(9));
         System.out.println(algoritmo.fibonacci(10));
 
+        System.out.println(algoritmo.getFibonacciList());
+
     }
 
 }
