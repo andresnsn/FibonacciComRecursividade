@@ -4,28 +4,35 @@ import java.util.List;
 
 public class Algoritmo {
 
-    int a = 0;
-    int b = 1;
-    int c;
-    int result;
-    List<Integer> list = new ArrayList<Integer>(Arrays.asList(a, b));
-    
+    int a = 0, b = 1, c, x = 0, y = 1, z;
+    List<Integer> listaRecursiva = new ArrayList<Integer>(Arrays.asList(a, b));
+    List<Integer> listaIterativa = new ArrayList<Integer>(Arrays.asList(a, b));
 
-    public int fibonacci(int n){
+    public int fibonacciRecursivo(int n){
         if(n <= 1) {
-            return list.get(n);
+            return listaRecursiva.get(n);
         }
 
         c = a + b;
         a = b;
         b = c;
-        list.add(b);
+        listaRecursiva.add(b);
 
-        return list.size() != n + 1? fibonacci(n) : list.get(n);
+        return listaRecursiva.size() != n + 1? fibonacciRecursivo(n) : listaRecursiva.get(n);
     }
 
-    public List getFibonacciList() {
-        return list;
+    public int fibonacciIterativo(int n) {
+        if(n <= 1) {
+            return listaIterativa.get(n);
+        }
+        for(int i=0; i < n; i++) {
+            z = x + y;
+            x = y;
+            y = z;
+            listaIterativa.add(b);
+        }
+
+        return listaIterativa.get(n);
     }
-    
+
 }
